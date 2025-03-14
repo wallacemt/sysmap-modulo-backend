@@ -1,0 +1,103 @@
+<RabbitMQ>
+    Definição: RabbitMQ é um broker de mensagens open-source que facilita a comunicação assíncrona entre diferentes partes de um sistema. Ele implementa o padrão AMQP (Advanced Message Queuing Protocol), que permite que as mensagens sejam enviadas de um ponto a outro de maneira eficiente e robusta.
+
+    Características principais:
+
+    Filas de Mensagens: As mensagens enviadas por produtores são armazenadas em filas e processadas por consumidores. Essas filas podem ser distribuídas em vários nós para maior confiabilidade e performance.
+
+    Exchange: Um exchange é responsável por receber as mensagens dos produtores e direcioná-las para uma ou mais filas, baseando-se em regras de roteamento. Existem diferentes tipos de exchanges:
+        Direct Exchange: Roteia mensagens para filas específicas com base em uma chave de roteamento.
+        Fanout Exchange: Roteia mensagens para todas as filas associadas.
+        Topic Exchange: Roteia mensagens para filas com base em padrões de tópicos.
+        Headers Exchange: Roteia mensagens com base em cabeçalhos (headers) personalizados.
+
+    Durabilidade e Persistência: RabbitMQ permite que as filas e as mensagens sejam persistentes, garantindo que, mesmo após uma falha, os dados não sejam perdidos.
+
+    Escalabilidade: RabbitMQ pode ser configurado para operar em cluster, permitindo balanceamento de carga e alta disponibilidade.
+    Protocolos Suportados: Além do AMQP, RabbitMQ também suporta outros protocolos, como STOMP, MQTT e HTTP.
+
+    Aplicações:
+        Comunicação entre microserviços.
+        Processamento assíncrono de tarefas.
+        Sistema de fila de trabalho, como em casos de processamento de imagens ou envio de emails.
+
+</RabbitMQ>
+
+<Testes Unitários>
+    Definição: Teste unitário é uma prática de desenvolvimento de software em que unidades individuais do código (geralmente funções ou métodos) são testadas isoladamente para garantir que se comportem conforme esperado.
+
+    Características principais:
+
+    Isolamento: O teste unitário deve testar uma unidade de código isoladamente, sem dependências externas, como bancos de dados ou sistemas de arquivos. Para isso, utilizam-se mocks e stubs.
+
+    Automação: Testes unitários são executados automaticamente sempre que o código é alterado, facilitando a detecção precoce de bugs.
+
+    Rápidos e Precisos: Os testes devem ser rápidos para não prejudicar a produtividade e devem se concentrar em aspectos específicos do código.
+
+    Cobertura de Código: Testes unitários ajudam a aumentar a cobertura do código, ou seja, garantir que diferentes partes do código sejam testadas.
+
+    Frameworks Populares:
+    Mocha, Jest, Jasmine (para JavaScript).
+
+    Benefícios:
+        Detecção precoce de erros: Como os testes são executados constantemente, é possível identificar erros mais rapidamente.
+
+        Facilidade de refatoração: Com uma boa cobertura de testes, você pode refatorar o código com mais confiança.
+
+        Documentação: Testes unitários também atuam como uma forma de documentação do comportamento esperado do código.
+
+</Testes Unitários>
+
+<Swagger>
+    Definição: Swagger é uma ferramenta de código aberto usada para documentação e design de APIs RESTful. Ele permite que desenvolvedores criem e documentem APIs de forma padronizada, tornando-as mais fáceis de entender e consumir.
+
+    Componentes principais:
+
+    Swagger UI: Interface interativa que gera automaticamente uma documentação da API em formato visual, permitindo que os usuários vejam os endpoints disponíveis e até testem as APIs diretamente pelo navegador.
+
+    Swagger Editor: Ferramenta para criar e editar especificações de API em Swagger (geralmente no formato YAML ou JSON).
+
+    Swagger Codegen: Ferramenta que pode gerar código cliente e servidor para diferentes linguagens a partir da especificação da API.
+
+    OpenAPI Specification: O Swagger foi transformado na especificação OpenAPI, um padrão aberto que define como uma API RESTful deve ser descrita de maneira padronizada.
+
+    Benefícios:
+        Documentação automágica: Após a definição da API, o Swagger gera documentação automática e interativa.
+
+        Facilidade de uso: A interface do Swagger UI facilita a compreensão dos endpoints, parâmetros e respostas da API.
+
+        Desenvolvimento mais ágil: Com o Swagger, equipes de frontend e backend podem trabalhar de forma mais integrada, pois a especificação da API serve como contrato entre as partes.
+
+        Testes diretos: Usuários podem interagir com a API e testar os endpoints diretamente pela interface do Swagger UI.
+</Swagger>
+
+<SOLID>
+    Definição: SOLID é um conjunto de cinco princípios de design de software que visam melhorar a legibilidade, escalabilidade e manutenção de sistemas orientados a objetos. Esses princípios ajudam a criar um código mais modular, flexível e fácil de entender.
+
+    Princípios:
+
+    S - Single Responsibility Principle (SRP):
+        Cada classe ou módulo deve ter apenas uma responsabilidade. Ou seja, uma classe deve ser responsável por uma única parte da funcionalidade do software.
+        Exemplo: Uma classe que gerencia a interface com o usuário não deve ser responsável por acessar o banco de dados.
+
+    O - Open/Closed Principle (OCP):
+        As classes devem ser abertas para extensão, mas fechadas para modificação. Isso significa que é possível adicionar novas funcionalidades sem alterar o código existente.
+        Exemplo: Utilizar herança ou composição para adicionar funcionalidades extras sem modificar diretamente as classes já existentes.
+
+    L - Liskov Substitution Principle (LSP):
+        Subtipos devem ser substituíveis por seus tipos base. Ou seja, uma instância de uma classe filha deve poder ser usada no lugar de uma instância da classe pai sem que o comportamento do sistema seja alterado.
+        Exemplo: Se uma classe Cachorro herda de Animal, um objeto Cachorro deve poder ser usado sempre que um Animal for esperado.
+
+    I - Interface Segregation Principle (ISP):
+        Uma classe não deve ser forçada a implementar interfaces que não usa. Em vez de criar uma interface única e grande, deve-se preferir várias interfaces menores e específicas.
+        Exemplo: Em vez de uma interface Animal com métodos como voar(), nadar(), correr(), deve-se criar interfaces separadas, como Voador, Nadador, Corredor.
+
+    D - Dependency Inversion Principle (DIP):
+        Os módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações. Além disso, as abstrações não devem depender de detalhes concretos, mas os detalhes concretos devem depender das abstrações.
+        Exemplo: Em vez de uma classe Carro depender diretamente de uma classe Motor, ela deve depender de uma interface IMotor, permitindo que diferentes implementações de motores possam ser usadas.
+
+    Benefícios:
+        Manutenibilidade: Facilita a manutenção e evolução do código, uma vez que os módulos são mais independentes e menos propensos a falhas.
+        Escalabilidade: A aplicação de SOLID facilita a adição de novas funcionalidades sem comprometer o código existente.
+         Legibilidade: Código bem estruturado e modular torna-se mais fácil de entender e de modificar no futuro.
+</SOLID>
