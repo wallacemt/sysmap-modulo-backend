@@ -1,0 +1,91 @@
+Comandos Básicos do Git
+    Configuração Inicial
+
+    git config --global user.name "Seu Nome": Configura o nome do usuário no Git.
+    git config --global user.email "email@dominio.com": Configura o e-mail do usuário.
+
+Criação e Inicialização de Repositórios
+    git init: Inicializa um repositório Git em um diretório existente.
+    git clone <url-do-repositório>: Clona um repositório remoto para o seu computador.
+
+Trabalhando com Arquivos
+    git status: Verifica o status dos arquivos (modificados, não rastreados, etc.).
+    git add <arquivo>: Adiciona arquivos ao índice de preparação (staging area).
+    git commit -m "mensagem": Realiza um commit com a mensagem fornecida.
+    git diff: Mostra as diferenças entre o estado atual e o último commit.
+
+Gerenciamento de Branches
+    git branch: Lista as branches locais.
+    git branch <nome-da-branch>: Cria uma nova branch.
+    git checkout <nome-da-branch>: Muda para a branch especificada.
+    git checkout -b <nome-da-branch>: Cria e muda para uma nova branch.
+    git merge <nome-da-branch>: Faz o merge da branch especificada para a branch atual.
+
+Trabalhando com Repositórios Remotos (GitHub)
+    git remote add origin <url-do-repositório>: Adiciona um repositório remoto.
+    git push origin <nome-da-branch>: Envia os commits para o repositório remoto.
+    git pull origin <nome-da-branch>: Atualiza o repositório local com mudanças do repositório remoto.
+    git fetch: Baixa as mudanças do repositório remoto, mas não as aplica no seu diretório local.
+
+Histórico e Revisão
+    git log: Mostra o histórico de commits.
+    git log --oneline: Exibe o histórico de commits em uma linha por commit.
+
+
+GitHub
+Repositórios Remotos
+
+No GitHub, crie repositórios para armazenar seu código de forma centralizada e compartilhar com outros desenvolvedores.
+Repositórios podem ser Públicos ou Privados.
+Pull Requests
+
+O Pull Request (PR) é uma maneira de sugerir mudanças no repositório de outro usuário.
+Permite discussões e revisão de código antes da fusão.
+Issues
+
+Usadas para registrar tarefas, bugs ou novas funcionalidades.
+Permitem organizar o trabalho e colaborar com outros desenvolvedores.
+Fork e Clone
+
+Fork: Cria uma cópia do repositório de outra pessoa no seu GitHub.
+Clone: Baixa uma cópia do repositório para o seu computador local.
+
+
+DDD (Domain-Driven Design)
+Definição
+
+DDD é uma abordagem de desenvolvimento de software que enfatiza o entendimento profundo do domínio de negócios para construir sistemas.
+
+Principais Conceitos
+    Domínio: O conjunto de informações e atividades relacionadas ao problema que se está tentando resolver.
+    Entidade: Um objeto com identidade própria, que pode ser modificado ao longo do tempo (ex: Usuário, Produto).
+    Valor-Objeto: Um objeto sem identidade própria, caracterizado por seus atributos (ex: Endereço, Data).
+    Agregados: Um conjunto de entidades e valor-objetos que são tratados como uma única unidade.
+    Repositórios: Interfaces para acessar e persistir agregados.
+    Serviços de Domínio: Lógica de negócios que não pertence a uma entidade ou valor-objeto específico.
+
+Ubiquitous Language
+    A linguagem usada por desenvolvedores e especialistas de domínio deve ser a mesma, para garantir a clareza e alinhamento sobre o que está sendo desenvolvido.
+
+Bounded Contexts
+    Cada parte do sistema (ou subdomínio) deve ser delimitada com seu próprio modelo de domínio. Os contextos limitados ajudam a evitar ambiguidades.
+    Princípios de Boas Práticas de Programação
+    Princípios SOLID
+
+KISS (Keep It Simple, Stupid)
+    Mantenha o código simples e fácil de entender, evitando complexidade desnecessária.
+
+DRY (Don't Repeat Yourself)
+Evite duplicação de código. Se o código se repete, deve ser refatorado em funções ou classes reutilizáveis.
+
+YAGNI (You Ain't Gonna Need It)
+    Não escreva código para necessidades futuras que ainda não são necessárias.
+
+TDD (Test-Driven Development)
+    Desenvolva o código com base nos testes, criando primeiro os testes e depois implementando o código necessário para passá-los.
+
+Refatoração
+    Refatore o código frequentemente para mantê-lo limpo, legível e fácil de manter.
+
+Documentação
+    Comente o código quando necessário e mantenha uma boa documentação sobre o que o sistema faz e como usá-lo.
