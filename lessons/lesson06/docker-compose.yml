@@ -1,0 +1,10 @@
+services:
+  postgresql:
+    image: postgres
+    container_name: "db"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bootcamp
+    ports:
+      - 5432:5432
