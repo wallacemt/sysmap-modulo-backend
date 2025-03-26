@@ -1,0 +1,23 @@
+services:
+  postgresql:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bootcamp
+    ports:
+      - "5432:5432"
+  localStack:
+    image: localstack/localstack
+    container_name: localStack
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: s3
+      AWS_REGION: us-east-1
+      AWS_ACESS_KEY: test
+      AWS_SECRET_ACESS_KEY: test
+
+
+  
