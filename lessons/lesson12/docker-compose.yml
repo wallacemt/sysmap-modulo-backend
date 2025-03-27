@@ -1,0 +1,19 @@
+services:
+  postgresql:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_USER: bootcamp
+      POSTGRES_PASSWORD: bootcamp
+      POSTGRES_DB: bootcamp
+    ports:
+      - "5432:5432"
+  api:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgresql
+    restart: always
